@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('AuthModule', ['ui.router'])
-.controller('AuthController', function ($scope, $state, SURL, $location, $http) {
+angular.module('scalegrayApp')
+.controller('AuthController', function ($scope, SURL, $location, $http) {
 
   $scope.user = {};
 
@@ -15,7 +15,7 @@ angular.module('AuthModule', ['ui.router'])
     data: $scope.user
   }).then(function(response) {
     //store.set('jwt', response.data.id_token);
-    $state.go('main');
+    $location.path('/dash');
     console.log(response);
     console.log("done! signed up!")
   }, function(error) {
@@ -33,7 +33,7 @@ angular.module('AuthModule', ['ui.router'])
        data: $scope.user
     }).then(function(response) {
       //store.set('jwt', response.data.id_token);
-      $state.go('main');
+      $location.path('/dash');
       console.log(response);
       console.log("Done! logged-in")
   }, function(error) {

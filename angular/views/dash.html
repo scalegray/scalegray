@@ -1,1 +1,292 @@
-<h1> Welcome Bitches, its time to lock n load!</h1>
+<html>
+<head>
+  <div ng-include="'views/nav.html'"></div>
+
+</head>
+
+<body>
+
+  <body ng-app="angularServiceDashboard">
+  <div class="menu">
+  <!--    <div class="sidebar-nav ">
+          <ul class="nav" id="side-menu">
+              <li class="heading">
+                  <a href="index.html"> AngularJs Client</a>
+              </li>
+              <li>
+                  <a class="active" href="index.html"><i class="ion ion-speedometer"></i> Dashboard<span class="ion ion-ios7-arrow-right pull-right"></span></a>
+              </li>
+              <li>
+                  <a href="#"><i class="ion ion-stats-bars"></i> Logging<span class="ion ion-ios7-arrow-right pull-right"></span></a>
+                  <ul class="nav nav-second-level">
+                      <li>
+                          <a href="#">Realtime Heartbeat</a>
+                      </li>
+                      <li>
+                          <a href="#">Communicate</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#"><i class="ion ion-fork-repo"></i> Libraries Used<span class="ion ion-ios7-arrow-right pull-right"></span></a>
+                  <ul class="nav nav-second-level">
+                      <li class="dropdown-header">Core</li>
+                      <li><a href="http://signalr.net/">SignalR</a></li>
+                      <li><a href="https://angularjs.org/">Angular.js</a></li>
+                      <li><a href="http://jquery.com/">jQuery</a></li>
+                      <li class="divider"></li>
+                      <li class="dropdown-header">Charting</li>
+                      <li><a href="http://d3js.org/">D3.js</a></li>
+                      <li><a href="http://fastly.github.io/epoch/">Epoch.js</a></li>
+                      <li><a href="https://github.com/dainbrump/ng-epoch">Ng-Epoch</a></li>
+                      <li class="dropdown-header">UI</li>
+                      <li><a href="#">Custom UI design by Anton Bacaj</a></li>
+                      <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+                      <li><a href="http://bootswatch.com/cyborg/">Boostwatch</a></li>
+                      <li><a href="http://bootswatch.com/cyborg/">SbAdmin</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#"><i class="ion ion-home"></i> Author <span class="ion ion-ios7-arrow-right pull-right"></span></a>
+                  <ul class="nav nav-second-level">
+                      <li><a href="http://coding.fitness">Coding.fitness</a></li>
+                      <li><a href="http://louiebacaj.com">LouieBacaj.com</a></li>
+                      <li><a href="http://codingfitness.com">Codingfitness.com</a></li>
+                      <li class="divider"></li>
+                      <li><a href="http://sitepoint.com">Sitepoint.com</a></li>
+                  </ul>
+              </li>
+              <li>
+
+              </li>
+          </ul>
+      </div> -->
+      <!-- /.sidebar-collapse -->
+  </div>
+
+      <div id="wrapper" class="inner-wrapper">
+      <div class="mobile-nav">
+
+      </div>
+          <div id="page-wrapper">
+              <div class="row" ng-controller="PerformanceDataController">
+                  <div class="col-lg-3 col-md-6">
+                      <div class="panel panel-dashboard">
+                          <div class="panel-heading">
+                              <div class="row">
+                                  <div class="col-xs-12 text-center">
+                                      <div class="controls left"><i class="ion ion-more"></i></div>
+                                      <div class="controls right"><a class="remove"><i class="ion ion-minus-round"></i></a></div>
+                                      <div class="center">Memory Performance</div>
+                                  </div>
+                              </div>
+                          </div>
+                              <div class="panel-body">
+
+                                  <div class="huge">{{currentRamNumber}}</div>
+                                  <a href="#"><span>View Details</span></a>
+                                  <div class="clearfix"></div>
+                              </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="panel panel-dashboard">
+                          <div class="panel-heading">
+                              <div class="row">
+                                  <div class="col-xs-12 text-center">
+                                      <div class="controls left"><i class="ion ion-more"></i></div>
+                                      <div class="controls right"><a class="remove"><i class="ion ion-minus-round"></i></a></div>
+                                      <div class="center">Network In K/B </div>
+                                  </div>
+                              </div>
+                          </div>
+                              <div class="panel-body">
+                                  <div class="huge">{{netInData}}</div>
+                                  <a href="#"><span>View Details</span></a>
+                                      <div class="clearfix"></div>
+                                  </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="panel panel-dashboard">
+                          <div class="panel-heading">
+                              <div class="row">
+                                  <div class="col-xs-12 text-center">
+                                      <div class="controls left"><i class="ion ion-more"></i></div>
+                                      <div class="controls right"><a class="remove"><i class="ion ion-minus-round"></i></a></div>
+                                      <div class="center">Network Out K/B</div>
+                                  </div>
+                              </div>
+                          </div>
+                              <div class="panel-body">
+                                  <div class="huge">{{netOutData}}</div>
+                                  <a href="#"><span>View Details</span></a>
+                                      <div class="clearfix"></div>
+  </div>
+
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="panel panel-dashboard">
+                          <div class="panel-heading">
+                              <div class="row">
+                                  <div class="col-xs-12 text-center">
+                                      <div class="controls left"><i class="ion ion-more"></i></div>
+                                      <div class="controls right"><a class="remove"><i class="ion ion-minus-round"></i></a></div>
+                                      <div class="center">Disk </div>
+                                  </div>
+                              </div>
+                          </div>
+                              <div class="panel-body">
+
+                                  <div class="huge">{{diskReaddData}}</div>
+                                  <a href="#"><span>View Details</span></a>
+                                      <div class="clearfix"></div>
+  </div>
+
+                      </div>
+                  </div>
+              </div>
+              <!-- /.row -->
+
+
+              <!-- /.row -->
+              <div class="row">
+                  <div class="col-lg-8">
+                      <div class="panel panel-dashboard">
+                          <div class="panel-heading">
+                              <div class="row">
+                                  <div class="col-xs-12 text-center">
+                                      <div class="controls left"><i class="ion ion-more"></i></div>
+                                      <div class="controls right"><a class="remove"><i class="ion ion-minus-round"></i></a></div>
+                                      <div class="center">Memory/CPU/Network </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- /.panel-heading -->
+
+                          <div class="panel-body" ng-controller="PerformanceDataController">
+                              <epoch-live-area chart-class="category10" chart-height="200" chart-data="realtimeArea" chart-stream="realtimeAreaFeed" chart-axes="areaAxes"></epoch-live-area>
+                          </div>
+
+
+                          <!-- /.panel-body -->
+                      </div>
+                      <!-- /.panel -->
+                      <div class="panel panel-dashboard">
+                          <div class="panel-heading">
+                              <div class="row">
+                                  <div class="col-xs-12 text-center">
+                                      <div class="controls left"><i class="ion ion-more"></i></div>
+                                      <div class="controls right"><a class="remove"><i class="ion ion-minus-round"></i></a></div>
+                                      <div class="center">NETWORK/MEMORY/CPU </div>
+                                  </div>
+                              </div>
+
+                          </div>
+
+                          <div class="panel-body">
+                              <div ng-controller="PerformanceDataController">
+                                  <epoch-live-bar chart-class="category10" chart-height="200" chart-data="realtimeBar" chart-stream="realtimeBarFeed" chart-axes="barAxes"></epoch-live-bar>
+                              </div>
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                      <!-- /.panel -->
+                      <div class="panel panel-dashboard">
+                          <div class="panel-heading">
+                              <div class="row">
+                                  <div class="col-xs-12 text-center">
+                                      <div class="huge">{{currentRamNumber}}</div>
+                                      <div class="controls left"><i class="ion ion-more"></i></div>
+                                      <div class="controls right"><a class="remove"><i class="ion ion-minus-round"></i></a></div>
+                                      <div class="center">Responsive Timeline</div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                              <div ng-controller="PerformanceDataController">
+                                  <div>
+                                      <epoch-live-line chart-class="category10" chart-height="200" chart-data="realtimeLine" chart-stream="realtimeLineFeed" chart-axes="areaAxes"></epoch-live-line>
+                                  </div>
+                              </div>
+
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                      <!-- /.panel -->
+                  <!-- /.col-lg-8 -->
+                  </div>
+                  <!-- /.col-lg-8 -->
+
+                  <div class="col-lg-4">
+                      <div class="panel panel-dashboard">
+                          <div class="panel-heading">
+                              <div class="row">
+                                  <div class="col-xs-12 text-center">
+                                      <div class="huge">{{currentRamNumber}}</div>
+                                      <div class="controls left"><i class="ion ion-more"></i></div>
+                                      <div class="controls right"><a class="remove"><i class="ion ion-minus-round "></i></a></div>
+                                      <div class="center">CPU Performance</div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="panel-body">
+                              <div ng-controller="PerformanceDataController">
+                                  <pie-chart data="data" options="options"></pie-chart>
+                              </div>
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+
+                      <div class="panel panel-dashboard">
+                          <div class="panel-heading">
+                              <div class="row">
+                                  <div class="col-xs-12 text-center">
+                                      <div class="huge">{{currentRamNumber}}</div>
+                                      <div class="controls left"><i class="ion ion-more"></i></div>
+                                      <div class="controls right"><a class="remove"><i class="ion ion-minus-round"></i></a></div>
+                                      <div class="center">Notifications Panel</div>
+                                  </div>
+                              </div>
+
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                              <div class="list-group" ng-controller="ServerTimeController">
+                                  <a href="#" class="list-group-item">
+                                      <i class="fa fa-comment fa-fw"></i> Server Time
+                                      <span class="pull-right text-muted small">
+                                          <em>{{currentServerTime}}</em>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="list-group-item">
+                                      <i class="fa fa-warning fa-fw"></i> Server Not Responding
+                                      <span class="pull-right text-muted small">
+                                          <em>10:57 AM  {{currentServerTimeManually}}</em>
+                                      </span>
+                                  </a>
+
+                              </div>
+                              <!-- /.list-group -->
+                              <button ng-click="getServerTime()" class="btn btn-default btn-block">Get Manual Time</button>
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                      <!-- /.panel -->
+
+
+                      </div>
+                  <!-- /.col-lg-4 -->
+              </div>
+
+              <!-- /.row -->
+          </div>
+          <!-- /#page-wrapper -->
+
+      </div>
+
+
+</body>
+</html>

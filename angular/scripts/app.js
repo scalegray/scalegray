@@ -3,7 +3,6 @@
  var sgapp = angular
 .module('scalegrayApp', [
   'ngAnimate',
-  'AuthModule',
   'ngRoute',
   'ngResource'
 
@@ -23,5 +22,8 @@
        .when('/login', {
          templateUrl: 'views/login.html',
          controller: 'AuthController'
+       })
+       .when('/dash', {
+         templateUrl: 'views/dash.html'
        });
 });

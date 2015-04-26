@@ -1,31 +1,27 @@
 'use strict';
 
- var app = angular
-.module('scalegray-dash', [
+ var sgapp = angular
+.module('scalegrayApp', [
   'ngAnimate',
+  'AuthModule',
   'ngRoute',
   'ngResource'
 
 ])
+.constant('SURL', 'http://localhost:3001/')
 .config(function ($routeProvider) {
-   $routeProvider
-    .when('/', {
-      templateUrl: 'views/welcome.html'
-      //controller: 'MainController'
-
-    })
+  $routeProvider
+     .when('/', {
+       templateUrl: 'views/login.html',
+       controller: 'AuthController'
+     })
     .when('/register', {
-      templateUrl: 'views/register.html'
-      //controller: 'AuthController'
+       templateUrl: 'views/register.html',
+       controller: 'AuthController'
+       })
 
-    })
-    .when('/login', {
-      templateUrl: 'views/login.html'
-      //controller: 'AuthController'
-
-    })
-
-    .otherwise({
-      redirectTo: '/'
-    });
+       .when('/login', {
+         templateUrl: 'views/login.html',
+         controller: 'AuthController'
+       });
 });

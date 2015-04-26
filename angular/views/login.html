@@ -1,12 +1,13 @@
-<div class="auth-forms title">
-  <h2>Login</h2>
+<div class="auth-forms title" ng-controller="AuthController">
+  <h1> scalegray  </h1>
+  <h3>Login</h3>
   <form ng-submit="login(user)">
 
     <div class="input-group">
       <div class="input-group-addon">
       	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
       </div>
-      <input type="email" ng-model="user.email" placeholder="Email" class="form-control" required>
+      <input type="email" ng-model="user.username" placeholder="Email" class="form-control" required>
     </div><br>
 
     <div class="input-group">

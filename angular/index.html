@@ -20,9 +20,9 @@
 </head> <!-- all imports done - bootstrap, custom css and materialdesign, oh material design, how awesome are you? -->
 
 
-<body ng-app="scalegray-dash">
+<body ng-app="scalegrayApp">
 
-  <div ng-include="'views/nav.html'"></div>
+
 
   <div class="jumbotron">
         <div ng-view=""></div>
@@ -32,6 +32,7 @@
 
     <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.js"></script>
+  <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.js"></script>
@@ -60,6 +61,8 @@
       <script src="scripts/app.js"></script>
 
   <script src="scripts/controllers/auth.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+
 
 
 

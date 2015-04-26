@@ -1,6 +1,5 @@
 var express = require('express'),
     _       = require('lodash'),
-    config  = require('./config'),
     jwt     = require('jsonwebtoken');
 
 var app = module.exports = express.Router();
@@ -16,6 +15,9 @@ function createToken(user) {
 }
 
 app.post('/users', function(req, res) {
+  console.log("Entered to register---");
+  console.log(res.body);
+  
   if (!req.body.username || !req.body.password) {
     return res.status(400).send("You must send the username and the password");
   }

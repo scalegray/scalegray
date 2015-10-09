@@ -4,10 +4,8 @@ import styles from './LoginPage.css';
 import withStyles from '../../decorators/withStyles';
 
 @withStyles(styles)
-//class LoginPage extends Component {
+class LoginPage extends Component {
 
-export default React.createClass({
-   displayName: 'LoginPage',
 
   static contextTypes = {
     onSetTitle: PropTypes.func.isRequired,
@@ -29,6 +27,6 @@ export default React.createClass({
     );
   }
 
-});
+}
 
-//export default LoginPage;
+export default LoginPage;

@@ -1,0 +1,299 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'react-bootstrap' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'react-bootstrap', null ]
+5 verbose cache add name=undefined spec="react-bootstrap" args=["react-bootstrap",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'react-bootstrap',
+6 verbose parsed url   path: 'react-bootstrap',
+6 verbose parsed url   href: 'react-bootstrap' }
+7 silly lockFile 71ffd37b-react-bootstrap react-bootstrap
+8 verbose lock react-bootstrap /home/morpheyesh/.npm/71ffd37b-react-bootstrap.lock
+9 silly lockFile 71ffd37b-react-bootstrap react-bootstrap
+10 silly lockFile 71ffd37b-react-bootstrap react-bootstrap
+11 verbose addNamed [ 'react-bootstrap', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 088a9b35-react-bootstrap react-bootstrap@
+14 verbose lock react-bootstrap@ /home/morpheyesh/.npm/088a9b35-react-bootstrap.lock
+15 silly addNameRange { name: 'react-bootstrap', range: '*', hasData: false }
+16 verbose url raw react-bootstrap
+17 verbose url resolving [ 'https://registry.npmjs.org/', './react-bootstrap' ]
+18 verbose url resolved https://registry.npmjs.org/react-bootstrap
+19 info trying registry request attempt 1 at 04:31:40
+20 verbose etag "8SDDRD5EBBBG1UXFGYL0Q9B4C"
+21 http GET https://registry.npmjs.org/react-bootstrap
+22 http 304 https://registry.npmjs.org/react-bootstrap
+23 silly registry.get cb [ 304,
+23 silly registry.get   { date: 'Fri, 09 Oct 2015 23:01:41 GMT',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     'cache-control': 'max-age=60',
+23 silly registry.get     etag: '"8SDDRD5EBBBG1UXFGYL0Q9B4C"',
+23 silly registry.get     age: '30',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-sin6921-SIN',
+23 silly registry.get     'x-cache': 'HIT',
+23 silly registry.get     'x-cache-hits': '1',
+23 silly registry.get     'x-timer': 'S1444431701.504706,VS0,VE0',
+23 silly registry.get     vary: 'Accept' } ]
+24 verbose etag react-bootstrap from cache
+25 silly addNameRange number 2 { name: 'react-bootstrap', range: '*', hasData: true }
+26 silly addNameRange versions [ 'react-bootstrap',
+26 silly addNameRange   [ '0.2.0',
+26 silly addNameRange     '0.3.0',
+26 silly addNameRange     '0.4.0',
+26 silly addNameRange     '0.4.2',
+26 silly addNameRange     '0.5.0',
+26 silly addNameRange     '0.5.1',
+26 silly addNameRange     '0.5.2',
+26 silly addNameRange     '0.6.2',
+26 silly addNameRange     '0.7.0',
+26 silly addNameRange     '0.6.0',
+26 silly addNameRange     '0.6.1',
+26 silly addNameRange     '0.7.1',
+26 silly addNameRange     '0.7.2',
+26 silly addNameRange     '0.8.0',
+26 silly addNameRange     '0.8.1',
+26 silly addNameRange     '0.8.2',
+26 silly addNameRange     '0.9.0',
+26 silly addNameRange     '0.10.0',
+26 silly addNameRange     '0.10.1',
+26 silly addNameRange     '0.10.2',
+26 silly addNameRange     '0.11.0',
+26 silly addNameRange     '0.11.1',
+26 silly addNameRange     '0.12.0',
+26 silly addNameRange     '0.13.0',
+26 silly addNameRange     '0.13.1',
+26 silly addNameRange     '0.13.2',
+26 silly addNameRange     '0.13.3',
+26 silly addNameRange     '0.14.0',
+26 silly addNameRange     '0.14.1',
+26 silly addNameRange     '0.15.0',
+26 silly addNameRange     '0.15.1',
+26 silly addNameRange     '0.16.0',
+26 silly addNameRange     '0.16.1',
+26 silly addNameRange     '0.17.0',
+26 silly addNameRange     '0.18.0',
+26 silly addNameRange     '0.19.0',
+26 silly addNameRange     '0.19.1',
+26 silly addNameRange     '0.20.0',
+26 silly addNameRange     '0.20.1',
+26 silly addNameRange     '0.20.2',
+26 silly addNameRange     '0.20.3',
+26 silly addNameRange     '0.21.0',
+26 silly addNameRange     '0.21.1',
+26 silly addNameRange     '0.21.2',
+26 silly addNameRange     '0.22.0',
+26 silly addNameRange     '0.22.1',
+26 silly addNameRange     '0.22.2',
+26 silly addNameRange     '0.22.3',
+26 silly addNameRange     '0.22.4',
+26 silly addNameRange     '0.22.5',
+26 silly addNameRange     '0.22.6',
+26 silly addNameRange     '0.23.0',
+26 silly addNameRange     '0.23.1',
+26 silly addNameRange     '0.24.0-alpha.0',
+26 silly addNameRange     '0.23.2',
+26 silly addNameRange     '0.24.0-alpha.1',
+26 silly addNameRange     '0.23.3',
+26 silly addNameRange     '0.24.0-alpha.2',
+26 silly addNameRange     '0.23.4',
+26 silly addNameRange     '0.24.0-alpha.3',
+26 silly addNameRange     '0.23.5',
+26 silly addNameRange     '0.24.0-alpha.4',
+26 silly addNameRange     '0.23.6',
+26 silly addNameRange     '0.23.7',
+26 silly addNameRange     '0.24.0',
+26 silly addNameRange     '0.24.1',
+26 silly addNameRange     '0.24.2',
+26 silly addNameRange     '0.24.3',
+26 silly addNameRange     '0.25.0-alpha.0',
+26 silly addNameRange     '0.24.4',
+26 silly addNameRange     '0.25.0-alpha.1',
+26 silly addNameRange     '0.24.5',
+26 silly addNameRange     '0.24.5-react-pre.0',
+26 silly addNameRange     '0.25.0',
+26 silly addNameRange     '0.25.100-react-pre.0',
+26 silly addNameRange     '0.25.1',
+26 silly addNameRange     '0.25.2',
+26 silly addNameRange     '0.25.100-react-pre.1',
+26 silly addNameRange     '0.26.0',
+26 silly addNameRange     '0.26.1',
+26 silly addNameRange     '0.26.2',
+26 silly addNameRange     '0.26.3',
+26 silly addNameRange     '0.26.4',
+26 silly addNameRange     '0.27.0',
+26 silly addNameRange     '0.27.1' ] ]
+27 verbose addNamed [ 'react-bootstrap', '0.27.1' ]
+28 verbose addNamed [ '0.27.1', '0.27.1' ]
+29 silly lockFile d60f35c6-react-bootstrap-0-27-1 react-bootstrap@0.27.1
+30 verbose lock react-bootstrap@0.27.1 /home/morpheyesh/.npm/d60f35c6-react-bootstrap-0-27-1.lock
+31 silly lockFile d60f35c6-react-bootstrap-0-27-1 react-bootstrap@0.27.1
+32 silly lockFile d60f35c6-react-bootstrap-0-27-1 react-bootstrap@0.27.1
+33 silly lockFile 088a9b35-react-bootstrap react-bootstrap@
+34 silly lockFile 088a9b35-react-bootstrap react-bootstrap@
+35 silly resolved [ { name: 'react-bootstrap',
+35 silly resolved     version: '0.27.1',
+35 silly resolved     description: 'Bootstrap 3 components built with React',
+35 silly resolved     repository:
+35 silly resolved      { type: 'git',
+35 silly resolved        url: 'git://github.com/react-bootstrap/react-bootstrap' },
+35 silly resolved     homepage: 'http://react-bootstrap.github.io/',
+35 silly resolved     scripts:
+35 silly resolved      { build: 'babel-node tools/build-cli.js',
+35 silly resolved        'test-watch': 'karma start',
+35 silly resolved        'test-coverage': 'COVERAGE=true karma start --single-run',
+35 silly resolved        test: 'npm run lint && npm run tests-set && npm run build',
+35 silly resolved        'tests-set': 'karma start --single-run && _mocha --compilers js:babel-core/register test/server/*Spec.js',
+35 silly resolved        lint: 'eslint ./',
+35 silly resolved        release: 'release',
+35 silly resolved        'docs-build': 'babel-node tools/build-cli.js --docs-only',
+35 silly resolved        docs: 'babel-node docs/dev-run',
+35 silly resolved        'docs-prod': 'npm run docs-build && NODE_ENV=production babel-node docs/server.js',
+35 silly resolved        'docs-prod-unoptimized': 'npm run docs-build -- --dev && NODE_ENV=production babel-node docs/server.js',
+35 silly resolved        minor: 'node ./tools/release minor',
+35 silly resolved        patch: 'node ./tools/release patch' },
+35 silly resolved     main: 'lib/index.js',
+35 silly resolved     directories: { lib: 'lib/' },
+35 silly resolved     files: [ 'LICENSE', 'README.md', 'CHANGELOG.md', 'lib', 'dist' ],
+35 silly resolved     keywords: [ 'react', 'ecosystem-react', 'react-component', 'bootstrap' ],
+35 silly resolved     author: { name: 'Stephen J. Collings', email: 'stevoland@gmail.com' },
+35 silly resolved     license: 'MIT',
+35 silly resolved     peerDependencies: { react: '>=0.14.0', 'react-dom': '>=0.14.0' },
+35 silly resolved     devDependencies:
+35 silly resolved      { babel: '^5.8.23',
+35 silly resolved        'babel-core': '^5.8.24',
+35 silly resolved        'babel-eslint': '^4.0.5',
+35 silly resolved        'babel-loader': '^5.3.2',
+35 silly resolved        bootstrap: '^3.3.5',
+35 silly resolved        brfs: '^1.4.0',
+35 silly resolved        chai: '^3.2.0',
+35 silly resolved        'child-process-promise': '^1.1.0',
+35 silly resolved        codemirror: '^5.5.0',
+35 silly resolved        colors: '^1.1.2',
+35 silly resolved        'css-loader': '^0.19.0',
+35 silly resolved        'es5-shim': '^4.1.10',
+35 silly resolved        eslint: '^1.5.1',
+35 silly resolved        'eslint-config-airbnb': '^0.1.0',
+35 silly resolved        'eslint-plugin-babel': '^2.0.0',
+35 silly resolved        'eslint-plugin-lodash': '^0.1.3',
+35 silly resolved        'eslint-plugin-mocha': '^1.0.0',
+35 silly resolved        'eslint-plugin-react': '^3.4.2',
+35 silly resolved        express: '^4.13.1',
+35 silly resolved        'extract-text-webpack-plugin': '^0.8.2',
+35 silly resolved        'file-loader': '^0.8.4',
+35 silly resolved        'fs-extra': '^0.23.0',
+35 silly resolved        'fs-promise': '^0.3.1',
+35 silly resolved        glob: '^5.0.14',
+35 silly resolved        history: '^1.9.0',
+35 silly resolved        'http-proxy': '^1.11.1',
+35 silly resolved        ip: '^1.0.1',
+35 silly resolved        'isparta-loader': '^1.0.0',
+35 silly resolved        'json-loader': '^0.5.2',
+35 silly resolved        karma: '~0.13.3',
+35 silly resolved        'karma-chrome-launcher': '~0.2.0',
+35 silly resolved        'karma-cli': '0.1.1',
+35 silly resolved        'karma-coverage': '^0.5.0',
+35 silly resolved        'karma-coveralls': '^1.1.2',
+35 silly resolved        'karma-firefox-launcher': '~0.1.6',
+35 silly resolved        'karma-mocha': '~0.2.0',
+35 silly resolved        'karma-mocha-reporter': '^1.0.4',
+35 silly resolved        'karma-phantomjs-launcher': '^0.2.0',
+35 silly resolved        'karma-sinon-chai': '^1.0.0',
+35 silly resolved        'karma-sourcemap-loader': '^0.3.5',
+35 silly resolved        'karma-webpack': '^1.7.0',
+35 silly resolved        less: '^2.5.1',
+35 silly resolved        'less-loader': '^2.2.0',
+35 silly resolved        lodash: '^3.10.1',
+35 silly resolved        marked: '^0.3.5',
+35 silly resolved        mocha: '^2.2.5',
+35 silly resolved        'mt-changelog': '^0.6.1',
+35 silly resolved        'node-libs-browser': '^0.5.2',
+35 silly resolved        nodemon: '^1.4.0',
+35 silly resolved        'output-file-sync': '^1.1.1',
+35 silly resolved        phantomjs: '^1.9.17',
+35 silly resolved        portfinder: '^0.4.0',
+35 silly resolved        react: '^0.14.0',
+35 silly resolved        'react-component-metadata': '^1.3.0',
+35 silly resolved        'react-dom': '^0.14.0',
+35 silly resolved        'react-hot-loader': '^1.2.8',
+35 silly resolved        'react-router': '^1.0.0-rc1',
+35 silly resolved        'release-script': '^0.5.0',
+35 silly resolved        rimraf: '^2.4.2',
+35 silly resolved        semver: '^5.0.1',
+35 silly resolved        sinon: '^1.15.4',
+35 silly resolved        'sinon-chai': '^2.8.0',
+35 silly resolved        'style-loader': '^0.12.3',
+35 silly resolved        'transform-loader': '^0.2.2',
+35 silly resolved        webpack: '^1.10.5',
+35 silly resolved        'webpack-dev-server': '^1.10.1',
+35 silly resolved        yargs: '^3.16.1' },
+35 silly resolved     dependencies:
+35 silly resolved      { 'babel-runtime': '^5.8.24',
+35 silly resolved        classnames: '^2.1.3',
+35 silly resolved        'dom-helpers': '^2.2.4',
+35 silly resolved        keycode: '^2.0.0',
+35 silly resolved        'lodash-compat': '^3.10.1',
+35 silly resolved        'react-overlays': '^0.5.0',
+35 silly resolved        uncontrollable: '^3.1.1',
+35 silly resolved        'react-prop-types': '^0.3.0',
+35 silly resolved        warning: '^2.0.0' },
+35 silly resolved     'release-script':
+35 silly resolved      { skipBuildStep: 'true',
+35 silly resolved        bowerRepo: 'git@github.com:react-bootstrap/react-bootstrap-bower.git',
+35 silly resolved        docsRepo: 'git@github.com:react-bootstrap/react-bootstrap.github.io.git' },
+35 silly resolved     readme: '# react-bootstrap\n\n[Bootstrap 3][bootstrap] components built with [React][react].\n\n[![Travis Build Status][build-badge]][build]\n[![Build status][appveyor-badge]][appveyor]\n\n[![HuBoard][huboard-badge]][huboard]\n[![Gitter][gitter-badge]][gitter]\n[![Thinkful][thinkful-badge]][thinkful]\n\n[![NPM version][npm-badge]][npm]\n[![Bower version][bower-badge]][bower]\n\n[![Dependency Status][deps-badge]][deps]\n[![devDependency Status][dev-deps-badge]][dev-deps]\n[![peerDependency Status][peer-deps-badge]][peer-deps]\n\n__Under active development - APIs will change.__ Check out the [1.0.0 Roadmap](https://github.com/react-bootstrap/react-bootstrap/wiki#100-roadmap) and [Contributing Guidelines][contributing] to see where you can help out. Prior to the 1.0.0 release, deprecations or breaking changes should result in a Minor version bump.\n\n## React v0.13 support\n\nReleases from v0.27.0 onward only support React v0.14. The latest releases compatible with React v0.13 are the v0.26.x releases.\n\n## Docs\n\nSee the [documentation][documentation] with live editable examples.\n\n## Related modules\n\n- [react-router-bootstrap][react-router-bootstrap] - Integration with [react-router][react-router].\n- [Complementary Tools][complementary-tools] - List of complementary tools that\n  can be used with React.\n\n## Local Setup\n\n- Install the dependencies with `npm install`\n- Run tests `npm test`\n- Run tests in watch mode `npm run test-watch`\n- Run the docs site in development mode with `npm run docs`. This will watch\n  for file changes as you work. Simply refresh the page to see the updates.\n- Build with `npm run build`\n\n## Contributions\n\nYes please! See the [contributing guidelines][contributing] for details.\n\n[bootstrap]: http://getbootstrap.com\n[react]: http://facebook.github.io/react/\n\n[documentation]: http://react-bootstrap.github.io\n[contributing]: https://github.com/react-bootstrap/react-bootstrap/blob/master/CONTRIBUTING.md\n\n[build-badge]: https://travis-ci.org/react-bootstrap/react-bootstrap.svg?branch=master\n[build]: https://travis-ci.org/react-bootstrap/react-bootstrap\n\n[npm-badge]: https://badge.fury.io/js/react-bootstrap.svg\n[npm]: http://badge.fury.io/js/react-bootstrap\n\n[bower-badge]: https://badge.fury.io/bo/react-bootstrap.svg\n[bower]: http://badge.fury.io/bo/react-bootstrap\n\n[gitter-badge]: https://badges.gitter.im/Join%20Chat.svg\n[gitter]: https://gitter.im/react-bootstrap/react-bootstrap?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge\n\n[deps-badge]: https://david-dm.org/react-bootstrap/react-bootstrap.svg\n[deps]: https://david-dm.org/react-bootstrap/react-bootstrap\n\n[dev-deps-badge]: https://david-dm.org/react-bootstrap/react-bootstrap/dev-status.svg\n[dev-deps]: https://david-dm.org/react-bootstrap/react-bootstrap#info=devDependencies\n\n[peer-deps-badge]: https://david-dm.org/react-bootstrap/react-bootstrap/peer-status.svg\n[peer-deps]: https://david-dm.org/react-bootstrap/react-bootstrap#info=peerDependencies\n\n[react-router-bootstrap]: https://github.com/react-bootstrap/react-router-bootstrap\n[react-router]: https://github.com/rackt/react-router\n\n[complementary-tools]: https://github.com/facebook/react/wiki/Complementary-Tools\n\n[huboard-badge]: https://img.shields.io/badge/Hu-Board-7965cc.svg\n[huboard]: https://huboard.com/react-bootstrap/react-bootstrap\n\n[thinkful-badge]: https://tf-assets-staging.s3.amazonaws.com/badges/thinkful_repo_badge.svg\n[thinkful]: http://start.thinkful.com/react/?utm_source=github&utm_medium=badge&utm_campaign=react-bootstrap\n\n[appveyor-badge]: https://ci.appveyor.com/api/projects/status/ylitpyo6n5yq1s6i/branch/master?svg=true\n[appveyor]: https://ci.appveyor.com/project/react-bootstrap/react-bootstrap/branch/master\n',
+35 silly resolved     readmeFilename: 'README.md',
+35 silly resolved     bugs: { url: 'https://github.com/react-bootstrap/react-bootstrap/issues' },
+35 silly resolved     _id: 'react-bootstrap@0.27.1',
+35 silly resolved     _from: 'react-bootstrap@' } ]
+36 info install react-bootstrap@0.27.1 into /usr/local/lib
+37 info installOne react-bootstrap@0.27.1
+38 info /usr/local/lib/node_modules/react-bootstrap unbuild
+39 verbose tar unpack /home/morpheyesh/.npm/react-bootstrap/0.27.1/package.tgz
+40 silly lockFile ee4d7bb4-lib-node-modules-react-bootstrap tar:///usr/local/lib/node_modules/react-bootstrap
+41 verbose lock tar:///usr/local/lib/node_modules/react-bootstrap /home/morpheyesh/.npm/ee4d7bb4-lib-node-modules-react-bootstrap.lock
+42 silly lockFile 78cd294f-act-bootstrap-0-27-1-package-tgz tar:///home/morpheyesh/.npm/react-bootstrap/0.27.1/package.tgz
+43 verbose lock tar:///home/morpheyesh/.npm/react-bootstrap/0.27.1/package.tgz /home/morpheyesh/.npm/78cd294f-act-bootstrap-0-27-1-package-tgz.lock
+44 silly gunzTarPerm modes [ '755', '644' ]
+45 error Error: EACCES, mkdir '/usr/local/lib/node_modules/react-bootstrap'
+45 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/react-bootstrap']
+45 error   errno: 3,
+45 error   code: 'EACCES',
+45 error   path: '/usr/local/lib/node_modules/react-bootstrap',
+45 error   fstream_type: 'Directory',
+45 error   fstream_path: '/usr/local/lib/node_modules/react-bootstrap',
+45 error   fstream_class: 'DirWriter',
+45 error   fstream_stack:
+45 error    [ '/usr/lib/nodejs/fstream/lib/dir-writer.js:36:23',
+45 error      '/usr/lib/nodejs/mkdirp/index.js:37:53',
+45 error      'Object.oncomplete (fs.js:107:15)' ] }
+46 error Please try running this command again as root/Administrator.
+47 error System Linux 3.19.0-30-generic
+48 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "react-bootstrap"
+49 error cwd /home/morpheyesh/code/js/scalegray
+50 error node -v v0.10.25
+51 error npm -v 1.3.10
+52 error path /usr/local/lib/node_modules/react-bootstrap
+53 error fstream_path /usr/local/lib/node_modules/react-bootstrap
+54 error fstream_type Directory
+55 error fstream_class DirWriter
+56 error code EACCES
+57 error errno 3
+58 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/react-bootstrap'
+59 error fstream_stack /usr/lib/nodejs/fstream/lib/dir-writer.js:36:23
+59 error fstream_stack /usr/lib/nodejs/mkdirp/index.js:37:53
+59 error fstream_stack Object.oncomplete (fs.js:107:15)
+60 verbose exit [ 3, true ]

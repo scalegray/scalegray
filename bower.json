@@ -1,0 +1,9 @@
+{
+  "name": "scalegray",
+  "dependencies": {
+    "jquery": "^2.1.3",
+    "bootstrap": "^3.3.5",
+    "magnific-popup": "^1.0.0",
+    "toastr": "^2.1.1"
+  }
+}

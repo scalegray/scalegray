@@ -35,7 +35,8 @@
     "swig": "^1.4.2",
     "underscore": "^1.8.3",
     "xml2js": "^0.4.9",
-    "reqwest": "~2.0.4"
+    "reqwest": "~2.0.4",
+    "jsonwebtoken": "~5.4.0"
   },
   "devDependencies": {
     "babelify": "^6.1.3",

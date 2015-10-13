@@ -6,6 +6,7 @@ import Login from './components/Login';
 
 export default (
   <Route handler={App}>
-    <Route path='/login' handler={Login} />
+    <Route path='/' handler={Login} />
+
   </Route>
 );

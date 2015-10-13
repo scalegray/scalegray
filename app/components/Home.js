@@ -1,14 +1,9 @@
 
 import React from 'react';
+import AuthenticatedComponent from './AuthenticatedComponent'
 
-class Home extends React.Component {
+export default AuthenticatedComponent(class Home extends React.Component {
   render() {
-    return (
-      <div className='alert alert-info'>
-        vboooyah
-      </div>
-    );
+    return (<h1>Hello {this.props.user }</h1>);
   }
-}
-
-export default Home;
+});

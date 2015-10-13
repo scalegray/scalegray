@@ -1,15 +1,33 @@
 
-import React,{ PropTypes } from 'react';
-import ImageLoader from 'react-imageloader';
+import React,{ PropTypes } from 'react/addons';
+import ReactMixin from 'react-mixin';
+import Auth from '../services/AuthService'
 
 
 
-class Login extends React.Component {
+export default class Login extends React.Component {
+
+  constructor() {
+    super()
+      this.state = {
+        user: '',
+        password: ''
+      };
+    }
 
 
+handleSubmit(event) {
+
+  event.preventDefault();
+
+Auth.login(this.state.user, this.state.password)
+.catch(function(err) {
+  console.log("error in logging-in");
+});
+}
 
 
-  render() {
+    render() {
     return (
       <div className="middle-box text-center loginscreen  animated fadeInDown">
             <div>
@@ -20,12 +38,12 @@ class Login extends React.Component {
               <p>Login in. To see it in action.</p>
               <form className="m-t" role="form" action="#">
                 <div className="form-group">
-                  <input type="email" className="form-control" placeholder="Username" required />
+                  <input valueLink={this.linkState('user')} className="form-control" placeholder="Username" required />
                 </div>
                 <div className="form-group">
-                  <input type="password" className="form-control" placeholder="Password" required />
+                  <input valueLink={this.linkState('password')} className="form-control" placeholder="Password" required />
                 </div>
-                <button type="submit" className="btn btn-primary block full-width m-b">Login</button>
+                <button type="submit" onClick={this.handleSubmit.bind(this)} className="btn btn-primary block full-width m-b">Login</button>
                 <a ui-sref="forgot_password"><small>Forgot password?</small></a>
                 <p className="text-muted text-center"><small>Do not have an account?</small></p>
                 <a className="btn btn-sm btn-white btn-block" ui-sref="register">Create an account</a>
@@ -38,4 +56,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+ReactMixin(Login.prototype, React.addons.LinkedStateMixin);

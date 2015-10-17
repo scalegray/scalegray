@@ -1,4 +1,3 @@
-
 import React,{ PropTypes } from 'react/addons';
 import ReactMixin from 'react-mixin';
 import Auth from '../services/AuthService'
@@ -10,7 +9,7 @@ export default class Login extends React.Component {
   constructor() {
     super()
       this.state = {
-        user: '',
+        email: '',
         password: ''
       };
     }
@@ -19,8 +18,9 @@ export default class Login extends React.Component {
 handleSubmit(event) {
 
   event.preventDefault();
-
-Auth.login(this.state.user, this.state.password)
+console.log(this.state.email);
+console.log(this.state.password);
+Auth.login(this.state.email, this.state.password)
 .catch(function(err) {
   console.log("error in logging-in");
 });
@@ -38,7 +38,7 @@ Auth.login(this.state.user, this.state.password)
               <p>Login in. To see it in action.</p>
               <form className="m-t" role="form" action="#">
                 <div className="form-group">
-                  <input valueLink={this.linkState('user')} className="form-control" placeholder="Username" required />
+                  <input valueLink={this.linkState('email')} className="form-control" placeholder="Username" required />
                 </div>
                 <div className="form-group">
                   <input valueLink={this.linkState('password')} className="form-control" placeholder="Password" required />

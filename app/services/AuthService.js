@@ -7,6 +7,7 @@ import LoginActions from '../actions/LoginActions';
 /*
  * AuthService talks to the server to get jwt and authenticates the user - invokes LoginAction
  */
+
 class AuthService {
 
   login(username, password) {
@@ -41,7 +42,9 @@ class AuthService {
     handleAuth(loginPromise) {
       return loginPromise
         .then(function(response) {
-          var jwt = response.id_token;
+          console.log("inside--> calling loginaction--");
+          var jwt = response.token;
+          console.log(jwt);
           LoginActions.loginUser(jwt);
           return true;
         });

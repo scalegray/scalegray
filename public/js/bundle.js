@@ -61,18 +61,50 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _storesLoginStore = require('../stores/LoginStore');
+
+var _storesLoginStore2 = _interopRequireDefault(_storesLoginStore);
+
 var _reactRouter = require('react-router');
 
-var App = (function (_React$Component) {
-  _inherits(App, _React$Component);
+var _servicesAuthService = require('../services/AuthService');
 
-  function App() {
-    _classCallCheck(this, App);
+var _servicesAuthService2 = _interopRequireDefault(_servicesAuthService);
 
-    _get(Object.getPrototypeOf(App.prototype), 'constructor', this).apply(this, arguments);
+var AuthenticatedApp = (function (_React$Component) {
+  _inherits(AuthenticatedApp, _React$Component);
+
+  function AuthenticatedApp() {
+    _classCallCheck(this, AuthenticatedApp);
+
+    _get(Object.getPrototypeOf(AuthenticatedApp.prototype), 'constructor', this).call(this);
+    this.state = this._getLoginState();
   }
 
-  _createClass(App, [{
+  _createClass(AuthenticatedApp, [{
+    key: '_getLoginState',
+    value: function _getLoginState() {
+      return {
+        userLoggedIn: _storesLoginStore2['default'].isLoggedIn()
+      };
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.changeListener = this._onChange.bind(this);
+      _storesLoginStore2['default'].addChangeListener(this.changeListener);
+    }
+  }, {
+    key: '_onChange',
+    value: function _onChange() {
+      this.setState(this._getLoginState());
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      _storesLoginStore2['default'].removeChangeListener(this.changeListener);
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2['default'].createElement(
@@ -81,15 +113,21 @@ var App = (function (_React$Component) {
         _react2['default'].createElement(_reactRouter.RouteHandler, null)
       );
     }
+  }, {
+    key: 'logout',
+    value: function logout(e) {
+      e.preventDefault();
+      _servicesAuthService2['default'].logout();
+    }
   }]);
 
-  return App;
+  return AuthenticatedApp;
 })(_react2['default'].Component);
 
-exports['default'] = App;
+exports['default'] = AuthenticatedApp;
 module.exports = exports['default'];
 
-},{"react":"react","react-router":"react-router"}],3:[function(require,module,exports){
+},{"../services/AuthService":9,"../stores/LoginStore":12,"react":"react","react-router":"react-router"}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -227,6 +265,24 @@ exports['default'] = (0, _AuthenticatedComponent2['default'])((function (_React$
 module.exports = exports['default'];
 
 },{"./AuthenticatedComponent":3,"react":"react"}],5:[function(require,module,exports){
+
+/*
+** Copyright (C) 2015 Yeshwanth Kumar <morpheyesh@gmail.com>
+**
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+** http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {

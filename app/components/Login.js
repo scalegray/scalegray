@@ -16,7 +16,7 @@
 ** limitations under the License.
 */
 
-
+import {Link} from 'react-router';
 import React,{ PropTypes } from 'react/addons';
 import ReactMixin from 'react-mixin';
 import Auth from '../services/AuthService'
@@ -65,7 +65,7 @@ Auth.login(this.state.email, this.state.password)
                 <button type="submit" onClick={this.handleSubmit.bind(this)} className="btn btn-primary block full-width m-b">Login</button>
                 <a ui-sref="forgot_password"><small>Forgot password?</small></a>
                 <p className="text-muted text-center"><small>Do not have an account?</small></p>
-                <a className="btn btn-sm btn-white btn-block" ui-sref="register">Create an account</a>
+                <a><Link to="/signup" className="btn btn-sm btn-white btn-block">Create an account</Link></a>
               </form>
               <p className="m-t"> <small>scalegray | Monitoring done right © 2015</small> </p>
             </div>

@@ -26,7 +26,8 @@ exports['default'] = {
     });
     //if (savedJwt != jwt) {
     var nextPath = _servicesRouterContainer2['default'].get().getCurrentQuery().nextPath || '/';
-    _servicesRouterContainer2['default'].get().transitionTo(nextPath);
+    console.log(nextPath);
+    _servicesRouterContainer2['default'].get().transitionTo("/signup");
     localStorage.setItem('jwt', jwt);
     //}
   },
@@ -240,7 +241,7 @@ var _AuthenticatedComponent = require('./AuthenticatedComponent');
 
 var _AuthenticatedComponent2 = _interopRequireDefault(_AuthenticatedComponent);
 
-exports['default'] = (0, _AuthenticatedComponent2['default'])((function (_React$Component) {
+var Dash = (function (_React$Component) {
   _inherits(Dash, _React$Component);
 
   function Dash() {
@@ -261,7 +262,9 @@ exports['default'] = (0, _AuthenticatedComponent2['default'])((function (_React$
   }]);
 
   return Dash;
-})(_react2['default'].Component));
+})(_react2['default'].Component);
+
+exports['default'] = Dash;
 module.exports = exports['default'];
 
 },{"./AuthenticatedComponent":3,"react":"react"}],5:[function(require,module,exports){
@@ -469,7 +472,7 @@ var Signup = (function (_React$Component) {
 
     _get(Object.getPrototypeOf(Signup.prototype), 'constructor', this).call(this);
     this.state = {
-      user: '',
+      email: '',
       password: '',
       extra: ''
     };
@@ -477,7 +480,7 @@ var Signup = (function (_React$Component) {
 
   /*  signup(e) {
     e.preventDefault();
-    Auth.signup(this.state.user, this.state.password, this.state.extra)
+    Auth.signup(this.state.email, this.state.password, this.state.extra)
       .catch(function(err) {
         alert("There's an error logging in");
         console.log("Error logging in", err);
@@ -605,7 +608,7 @@ exports['default'] = {
   BASE_URL: BASE_URL,
   LOGIN_URL: BASE_URL + 'api/auth',
   //  LOGIN_URL: BASE_URL + 'sessions/create',
-  SIGNUP_URL: BASE_URL + 'users',
+  SIGNUP_URL: BASE_URL + 'user',
   LOGIN_USER: 'LOGIN_USER',
   LOGOUT_USER: 'LOGOUT_USER'
 };
@@ -768,7 +771,6 @@ var AuthService = (function () {
       return loginPromise.then(function (response) {
         console.log("inside--> calling loginaction--");
         var jwt = response.token;
-        console.log(jwt);
         _actionsLoginActions2['default'].loginUser(jwt);
         return true;
       });

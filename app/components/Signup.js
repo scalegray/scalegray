@@ -8,7 +8,7 @@ export default class Signup extends React.Component {
   constructor() {
     super()
     this.state = {
-      user: '',
+      email: '',
       password: '',
       extra: ''
     };
@@ -16,7 +16,7 @@ export default class Signup extends React.Component {
 
   /*  signup(e) {
     e.preventDefault();
-    Auth.signup(this.state.user, this.state.password, this.state.extra)
+    Auth.signup(this.state.email, this.state.password, this.state.extra)
       .catch(function(err) {
         alert("There's an error logging in");
         console.log("Error logging in", err);

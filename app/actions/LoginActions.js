@@ -11,7 +11,8 @@ export default {
     });
     //if (savedJwt != jwt) {
       var nextPath = RouterContainer.get().getCurrentQuery().nextPath || '/';
-      RouterContainer.get().transitionTo(nextPath);
+      console.log(nextPath);
+      RouterContainer.get().transitionTo("/signup");
       localStorage.setItem('jwt', jwt);
     //}
   },

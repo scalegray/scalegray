@@ -4,6 +4,7 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var http = require('http');
+var _ = require('lodash');
 
 var swig = require('swig');
 var React = require('react');
@@ -58,10 +59,55 @@ app.get('/tour', function(req, res) {
   });
 });
 
+/*
+ * Server side helper methods
+ */
+
+ function getUserScheme(req) {
+
+   var email;
+   var type;
+   var userSearch = {};
+
+    email = req.body.email;
+     type = 'email';
+     userSearch = { email: email };
+
+
+   return {
+     email: email,
+     type: type,
+     userSearch: userSearch
+   }
+ }
+
+
+
 var apiRoutes = express.Router();
+/*
+apiRoutes.post('/user', function(req, res) {
+//  var Account = require("./models/account")
+  var userScheme = getUserScheme(req);
 
+  if (!userScheme.email || !req.body.password) {
+    return res.status(400).send("You must send the username and the password");
+  }
 
+  if (_.find(Account, userScheme.userSearch)) {
+   return res.status(400).send("A user with that username already exists");
+  }
 
+  var profile = _.pick(req.body, userScheme.type, 'password', 'extra');
+  profile.id = _.max(Account, 'id').id + 1;
+
+  Account.push(profile);
+
+  res.status(201).send({
+    token: jwt.sign(profile, app.get('secretKey'))
+
+  });
+});
+*/
 apiRoutes.post('/auth', function(req, res) {
   console.log("inside auth===>");
   Account.findOne({

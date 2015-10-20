@@ -44,7 +44,6 @@ class AuthService {
         .then(function(response) {
           console.log("inside--> calling loginaction--");
           var jwt = response.token;
-          console.log(jwt);
           LoginActions.loginUser(jwt);
           return true;
         });

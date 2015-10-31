@@ -9,8 +9,8 @@ import Signup from './components/Signup';
 
 export default  (
   <Route handler={App}>
-    <Route name="login" handler={Login}/>
+    <Route name="login" handler={Login} />
     <Route name="signup" handler={Signup}/>
-    <Route name="dash" path="/" handler={Dash}/>
+    <Route name="dash" path="/dash" handler={Dash} />
   </Route>
 );

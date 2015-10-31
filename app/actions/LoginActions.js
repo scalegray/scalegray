@@ -4,15 +4,17 @@ import RouterContainer from '../services/RouterContainer'
 
 export default {
   loginUser: (jwt) => {
-    //var savedJwt = localStorage.getItem('jwt');
+  //var savedJwt = localStorage.getItem('jwt');
+
    AppDispatcher.dispatch({
       actionType: LOGIN_USER,
       jwt: jwt
     });
+
     //if (savedJwt != jwt) {
       var nextPath = RouterContainer.get().getCurrentQuery().nextPath || '/';
       console.log(nextPath);
-      RouterContainer.get().transitionTo("/signup");
+      RouterContainer.get().transitionTo(nextPath);
       localStorage.setItem('jwt', jwt);
     //}
   },

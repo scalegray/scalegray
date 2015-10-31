@@ -20,14 +20,16 @@ var _servicesRouterContainer2 = _interopRequireDefault(_servicesRouterContainer)
 exports['default'] = {
   loginUser: function loginUser(jwt) {
     //var savedJwt = localStorage.getItem('jwt');
+
     _dispatchersAppDispatcherJs2['default'].dispatch({
       actionType: _constantsConstantsJs.LOGIN_USER,
       jwt: jwt
     });
+
     //if (savedJwt != jwt) {
     var nextPath = _servicesRouterContainer2['default'].get().getCurrentQuery().nextPath || '/';
     console.log(nextPath);
-    _servicesRouterContainer2['default'].get().transitionTo("/signup");
+    _servicesRouterContainer2['default'].get().transitionTo(nextPath);
     localStorage.setItem('jwt', jwt);
     //}
   },
@@ -62,50 +64,18 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _storesLoginStore = require('../stores/LoginStore');
-
-var _storesLoginStore2 = _interopRequireDefault(_storesLoginStore);
-
 var _reactRouter = require('react-router');
 
-var _servicesAuthService = require('../services/AuthService');
+var App = (function (_React$Component) {
+  _inherits(App, _React$Component);
 
-var _servicesAuthService2 = _interopRequireDefault(_servicesAuthService);
+  function App() {
+    _classCallCheck(this, App);
 
-var AuthenticatedApp = (function (_React$Component) {
-  _inherits(AuthenticatedApp, _React$Component);
-
-  function AuthenticatedApp() {
-    _classCallCheck(this, AuthenticatedApp);
-
-    _get(Object.getPrototypeOf(AuthenticatedApp.prototype), 'constructor', this).call(this);
-    this.state = this._getLoginState();
+    _get(Object.getPrototypeOf(App.prototype), 'constructor', this).apply(this, arguments);
   }
 
-  _createClass(AuthenticatedApp, [{
-    key: '_getLoginState',
-    value: function _getLoginState() {
-      return {
-        userLoggedIn: _storesLoginStore2['default'].isLoggedIn()
-      };
-    }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.changeListener = this._onChange.bind(this);
-      _storesLoginStore2['default'].addChangeListener(this.changeListener);
-    }
-  }, {
-    key: '_onChange',
-    value: function _onChange() {
-      this.setState(this._getLoginState());
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      _storesLoginStore2['default'].removeChangeListener(this.changeListener);
-    }
-  }, {
+  _createClass(App, [{
     key: 'render',
     value: function render() {
       return _react2['default'].createElement(
@@ -114,21 +84,15 @@ var AuthenticatedApp = (function (_React$Component) {
         _react2['default'].createElement(_reactRouter.RouteHandler, null)
       );
     }
-  }, {
-    key: 'logout',
-    value: function logout(e) {
-      e.preventDefault();
-      _servicesAuthService2['default'].logout();
-    }
   }]);
 
-  return AuthenticatedApp;
+  return App;
 })(_react2['default'].Component);
 
-exports['default'] = AuthenticatedApp;
+exports['default'] = App;
 module.exports = exports['default'];
 
-},{"../services/AuthService":11,"../stores/LoginStore":14,"react":"react","react-router":"react-router"}],3:[function(require,module,exports){
+},{"react":"react","react-router":"react-router"}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -241,7 +205,7 @@ var _AuthenticatedComponent = require('./AuthenticatedComponent');
 
 var _AuthenticatedComponent2 = _interopRequireDefault(_AuthenticatedComponent);
 
-var Dash = (function (_React$Component) {
+exports['default'] = (0, _AuthenticatedComponent2['default'])((function (_React$Component) {
   _inherits(Dash, _React$Component);
 
   function Dash() {
@@ -262,9 +226,7 @@ var Dash = (function (_React$Component) {
   }]);
 
   return Dash;
-})(_react2['default'].Component);
-
-exports['default'] = Dash;
+})(_react2['default'].Component));
 module.exports = exports['default'];
 
 },{"./AuthenticatedComponent":3,"react":"react"}],5:[function(require,module,exports){
@@ -693,7 +655,7 @@ exports['default'] = _react2['default'].createElement(
   { handler: _componentsApp2['default'] },
   _react2['default'].createElement(_reactRouter.Route, { name: 'login', handler: _componentsLogin2['default'] }),
   _react2['default'].createElement(_reactRouter.Route, { name: 'signup', handler: _componentsSignup2['default'] }),
-  _react2['default'].createElement(_reactRouter.Route, { name: 'dash', path: '/', handler: _componentsDash2['default'] })
+  _react2['default'].createElement(_reactRouter.Route, { name: 'dash', path: '/dash', handler: _componentsDash2['default'] })
 );
 module.exports = exports['default'];
 

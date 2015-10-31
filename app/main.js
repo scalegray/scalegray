@@ -5,8 +5,6 @@ import RouterContainer from './services/RouterContainer'
 import {Route, HistoryLocation} from 'react-router';
 
 
-
-
 var router = Router.create({
   routes: routes,
   location: HistoryLocation

@@ -62,7 +62,7 @@ app.get('/tour', function(req, res) {
 /*
  * Server side helper methods
  */
-
+/*
  function getUserScheme(req) {
 
    var email;
@@ -81,7 +81,7 @@ app.get('/tour', function(req, res) {
    }
  }
 
-
+*/
 
 var apiRoutes = express.Router();
 /*
@@ -148,7 +148,7 @@ apiRoutes.post('/auth', function(req, res) {
 /*
  * Middleware for token verification on every request except for /auth
  */
-
+/*
 apiRoutes.use(function(req, res, next) {
 
   var token = req.headers['x-access-token'] || req.body.token || req.query.token
@@ -173,11 +173,11 @@ apiRoutes.use(function(req, res, next) {
     });
   }
 });
-
+*/
 /*
  * server side routes
  */
-
+/*
 apiRoutes.get('/', function(req, res) {
   res.json({
     message: 'Welcome to the coolest API on earth!'
@@ -191,15 +191,15 @@ apiRoutes.get('/users', function(req, res) {
   });
 });
 
-
+*/
 /*
  * Middleware setup
  */
 
 
 
-app.use('/api', apiRoutes);
-
+//app.use('/api', apiRoutes);
+/*
 app.use(function(req, res) {
   Router.run(routes, req.path, function(Handler) {
     var html = React.renderToString(React.createElement(Handler));
@@ -209,7 +209,7 @@ app.use(function(req, res) {
     res.send(page);
   });
 
-});
+}); */
 
 
 

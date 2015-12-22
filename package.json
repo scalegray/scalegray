@@ -6,6 +6,10 @@
     "type": "git",
     "url": "https://github.com/scalegray/scalegray"
   },
+  "author": {
+    "name": "Yeshwanth Kumar",
+    "email": "morpheyesh@gmail.com"
+  },
   "main": "server.js",
   "scripts": {
     "start": "babel-node server.js",
